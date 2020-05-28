@@ -1,5 +1,6 @@
 import math
 
+
 class UnigramModel:
     def __init__(self):
         self.counts = {}
@@ -33,7 +34,7 @@ class UnigramModel:
             for word, count in self.counts.items():
                 probability = float(count) / self.total_count
                 self.probabilities[word] = probability
-                f.write("{}, {}".format(word, probability))
+                f.write("{}, {}\n".format(word, probability))
 
     def calculate_entropy(self, test_file_path):
         l_1 = .95
@@ -59,6 +60,4 @@ class UnigramModel:
 
         print("entropy = {}".format(H/W))
         print("coverage = {}".format((W-unk)/W))
-
-
 
