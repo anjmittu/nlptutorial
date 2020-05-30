@@ -3,9 +3,9 @@ from ngram_model import NgramModel
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-test_input1 = os.path.join(PROJECT_ROOT, "test/01-train-input.txt")
-test_input2 = os.path.join(PROJECT_ROOT, "test/01-test-input.txt")
-test_output = os.path.join(PROJECT_ROOT, "exercises/02/output/test_output.txt")
+test_input1 = os.path.join(PROJECT_ROOT, "test/ex1-train-input.txt")
+test_input2 = os.path.join(PROJECT_ROOT, "test/ex1-test-input.txt")
+test_output = os.path.join(PROJECT_ROOT, "exercises/ex2/output/test_output.txt")
 
 # Train the model
 model_test = NgramModel(2)

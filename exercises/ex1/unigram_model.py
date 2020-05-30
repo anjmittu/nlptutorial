@@ -61,3 +61,19 @@ class UnigramModel:
         print("entropy = {}".format(H/W))
         print("coverage = {}".format((W-unk)/W))
 
+    def is_word_in_model(self, word):
+        return word in self.probabilities
+
+    def probability_of_word(self, word):
+        return self.probabilities[word]
+
+    def load_model_from_file(self, file_path):
+        with open(file_path, 'r') as f:
+            data = f.read()
+        self.probabilities = {}
+        for line in data.split("\n"):
+            if len(line) > 0:
+                word = line.split("\t")[0]
+                probability = line.split("\t")[1]
+                self.probabilities[word] = float(probability)
+

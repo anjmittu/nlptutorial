@@ -22,7 +22,7 @@ coverage = 0.800000
 #  ( H(a) + H(c) + H(</s>) + H(e) + H(</s>) ) / 5
 #  = 6.7098
 #
-# For the coverage, only one of the words "e" out of 5 is missing, so our
+# For the coverage, only ex1 of the words "e" out of 5 is missing, so our
 # coverage is 4/5 = 0.8
 #
 # Note that we are dividing by 5, including the sentence final symbol. It is
